@@ -1,38 +1,62 @@
-.App {
+body{
+  background-color: honeydew;
+}
+
+.grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:100px 100px 100px 100px ;
+  margin-top: 2%;
+}
+
+.gridDiv{
+  backface-visibility: hidden;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+
+img{
+  height:80px;
+  width:80px;
+}
+
+.Timer{
+  color: green;
+  margin-top: 1% ;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  user-select: none;
+  height: 110px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.front { 
+  background-color:gray;
+  cursor: pointer;
+}
+.back {
+  transform: rotateY(180deg);
+  line-height: 110px;
+}    
+.open{
+  transform: rotateY(180deg);
+}
+.match {
+  transform: rotateY(180deg);
+}  
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(105,105,105);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
